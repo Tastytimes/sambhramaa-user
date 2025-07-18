@@ -1,0 +1,7 @@
+{
+  "name": "ooota-food-delivery-app-cap",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
