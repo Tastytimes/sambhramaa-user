@@ -1,0 +1,575 @@
+.empty-cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.empty-cart-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.empty-cart-container h2 {
+  color: var(--ion-color-dark);
+  margin: 16px 0 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.empty-cart-container p {
+  color: var(--ion-color-medium);
+  margin: 0 0 32px 0;
+  font-size: 16px;
+}
+
+.browse-button {
+  --background: #ff5722;
+  --color: white;
+  margin-top: 20px;
+  max-width: 250px;
+}
+
+/* Restaurant Header */
+.restaurant-header {
+  padding: 20px 16px 16px 16px;
+  background-color: white;
+  margin-bottom: 8px;
+}
+
+.restaurant-title {
+  margin: 0;
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Cart Items - New Clean Design */
+.cart-items-container {
+  background-color: white;
+  margin-bottom: 8px;
+}
+
+.cart-item-wrapper {
+  padding: 20px 16px;
+}
+
+.cart-item-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.item-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.veg-indicator {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #4caf50;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.veg-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #4caf50;
+  border-radius: 50%;
+}
+
+.item-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.3;
+}
+
+.item-price {
+  margin-bottom: 8px;
+  margin-left: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.item-description {
+  margin-bottom: 12px;
+  margin-left: 30px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.customize-text {
+  margin-left: 30px;
+  font-size: 14px;
+  color: #000;
+  font-weight: 500;
+}
+
+/* Quantity Controls - New Design */
+.quantity-controls-new {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  margin-left: 16px;
+  flex-shrink: 0;
+}
+
+.quantity-btn-new {
+  --color: #666;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.quantity-text-new {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  min-width: 30px;
+  text-align: center;
+  margin: 0 4px;
+}
+
+/* Item Divider */
+.item-divider {
+  height: 1px;
+  background-color: #f0f0f0;
+  margin: 0 16px;
+}
+
+/* Address Card - Updated */
+.address-card {
+  margin: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.address-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.address-icon-title {
+  display: flex;
+  align-items: center;
+}
+
+.address-main-icon {
+  color: #ff5722;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.address-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ion-color-dark);
+}
+
+.change-address-btn {
+  --color: #ff5722;
+  font-size: 14px;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  height: 32px;
+}
+
+.selected-address {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+}
+
+.address-type-icon {
+  color: var(--ion-color-medium);
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.address-details {
+  flex: 1;
+}
+
+.address-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ion-color-dark);
+  display: block;
+}
+
+.address-text {
+  font-size: 13px;
+  color: var(--ion-color-medium);
+  display: block;
+  line-height: 1.3;
+}
+
+/* Other sections - Updated spacing */
+.cooking-request-card,
+.promo-card,
+.summary-card {
+  margin: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ion-color-dark);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.summary-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--ion-color-dark);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.cooking-request-input {
+  --background: #f8f9fa;
+  --color: var(--ion-color-dark);
+  --placeholder-color: var(--ion-color-medium);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+/* Promo Code */
+.promo-section {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.promo-input {
+  flex: 1;
+  --background: #f8f9fa;
+  --color: var(--ion-color-dark);
+  --placeholder-color: var(--ion-color-medium);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.apply-btn {
+  --background: #ff5722;
+  --color: white;
+  height: 48px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Order Summary */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.summary-row ion-text:first-child {
+  color: var(--ion-color-medium);
+  font-size: 15px;
+}
+
+.summary-row ion-text:last-child {
+  color: var(--ion-color-dark);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.summary-divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 16px 0;
+}
+
+.total-row {
+  margin-bottom: 0;
+}
+
+.total-label {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  color: var(--ion-color-dark) !important;
+}
+
+.total-value {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  color: #ff5722 !important;
+}
+
+/* Checkout Button - Updated */
+.checkout-container {
+  background-color: white;
+  padding: 16px;
+  margin-top: 16px;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-btn {
+  --background: #ff5722;
+  --color: white;
+  height: 52px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  border-radius: 8px;
+}
+
+/* Address Modal */
+.modal-address-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+.modal-address-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-address-icon.add-icon {
+  background: #fff3f0;
+}
+
+.modal-address-icon ion-icon {
+  color: #ff5722;
+  font-size: 20px;
+}
+
+.modal-address-details {
+  flex: 1;
+}
+
+.modal-address-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ion-color-dark);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal-address-text {
+  font-size: 14px;
+  color: var(--ion-color-medium);
+  display: block;
+  line-height: 1.4;
+}
+
+.add-address-item {
+  border-top: 1px solid #e0e0e0;
+  margin-top: 8px;
+  padding-top: 8px;
+}
+
+.add-address-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ff5722;
+}
+
+/* Coins Section */
+.coins-card {
+  margin: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.coins-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coins-info {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.coins-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.coins-icon-wrapper ion-icon {
+  font-size: 20px;
+  color: #fff;
+}
+
+.coins-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.coins-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ion-color-dark);
+}
+
+.coins-balance {
+  font-size: 14px;
+  color: var(--ion-color-medium);
+}
+
+.coins-checkbox {
+  cursor: pointer;
+}
+
+.coins-checkbox.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.coins-checkbox ion-icon {
+  font-size: 28px;
+}
+
+.coins-checkbox ion-icon.active {
+  color: #4CAF50;
+}
+
+.coins-checkbox ion-icon.inactive {
+  color: var(--ion-color-medium);
+}
+
+.coins-applied-message {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background-color: #e8f5e9;
+  border-radius: 8px;
+}
+
+.coins-applied-message ion-text {
+  font-size: 13px;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+.coins-unavailable-message {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background-color: #fff3e0;
+  border-radius: 8px;
+}
+
+.coins-unavailable-message ion-text {
+  font-size: 13px;
+  color: #e65100;
+}
+
+/* No Address Section */
+.no-address-section {
+  margin-left: 24px;
+}
+
+.no-address-text {
+  font-size: 14px;
+  color: var(--ion-color-medium);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.address-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.select-address-btn {
+  --border-color: #ff5722;
+  --color: #ff5722;
+  height: 36px;
+  font-size: 13px;
+}
+
+.add-address-btn {
+  --background: #ff5722;
+  --color: white;
+  height: 36px;
+  font-size: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cart-item-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .quantity-controls-new {
+    margin-left: 30px;
+    margin-top: 8px;
+  }
+
+  .promo-section {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .apply-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .address-card,
+  .cooking-request-card,
+  .promo-card,
+  .summary-card {
+    margin: 8px 8px;
+  }
+
+  .checkout-container {
+    padding: 12px 8px;
+  }
+
+  .cart-item-wrapper {
+    padding: 16px 8px;
+  }
+}

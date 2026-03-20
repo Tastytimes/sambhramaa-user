@@ -1,35 +1,38 @@
-import { Redirect, Route } from 'react-router-dom';
-import {
-  IonApp,
-  IonIcon,
-  IonLabel,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonTabs,
-  setupIonicReact
-} from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import type React from "react"
+import { useApiErrorHandler } from "./hooks/useApiErrorHandler"
+import { IonApp, IonRouterOutlet, setupIonicReact } from "@ionic/react"
+import { IonReactRouter } from "@ionic/react-router"
+import { Redirect, Route } from "react-router-dom"
+import { Provider } from "react-redux"
+import { store } from "./store/store"
+
+import Login from "./pages/Login"
+import SignUp from "./pages/SignUp"
+import ResetPassword from "./pages/ResetPassword"
+import Dashboard from "./pages/Dashboard"
+import ChangePasswordPage from "./pages/ChangePasswordPage"
+import AddressesPage from "./pages/AddressesPage"
+import SelectLocationPage from "./pages/SelectLocationPage"
+import AddAddressPage from "./pages/AddAddressPage"
+import EditAddressPage from "./pages/EditAddressPage"
+import SelectAddressPage from "./pages/SelectAddressPage"
+import RestaurantDetails from "./pages/RestaurantDetails"
 
 /* Core CSS required for Ionic components to work properly */
-import '@ionic/react/css/core.css';
+import "@ionic/react/css/core.css"
 
 /* Basic CSS for apps built with Ionic */
-import '@ionic/react/css/normalize.css';
-import '@ionic/react/css/structure.css';
-import '@ionic/react/css/typography.css';
+import "@ionic/react/css/normalize.css"
+import "@ionic/react/css/structure.css"
+import "@ionic/react/css/typography.css"
 
 /* Optional CSS utils that can be commented out */
-import '@ionic/react/css/padding.css';
-import '@ionic/react/css/float-elements.css';
-import '@ionic/react/css/text-alignment.css';
-import '@ionic/react/css/text-transformation.css';
-import '@ionic/react/css/flex-utils.css';
-import '@ionic/react/css/display.css';
+import "@ionic/react/css/padding.css"
+import "@ionic/react/css/float-elements.css"
+import "@ionic/react/css/text-alignment.css"
+import "@ionic/react/css/text-transformation.css"
+import "@ionic/react/css/flex-utils.css"
+import "@ionic/react/css/display.css"
 
 /**
  * Ionic Dark Mode
@@ -40,48 +43,80 @@ import '@ionic/react/css/display.css';
 
 /* import '@ionic/react/css/palettes/dark.always.css'; */
 /* import '@ionic/react/css/palettes/dark.class.css'; */
-import '@ionic/react/css/palettes/dark.system.css';
+import "@ionic/react/css/palettes/dark.system.css"
 
 /* Theme variables */
-import './theme/variables.css';
+import "./theme/variables.css"
+import FavoritesPage from "./pages/FavoritesPage"
+import OrderProcessingPage from "./pages/OrderProcessingPage"
+import OrdersHistoryPage from "./pages/OrdersHistoryPage"
+import OrderDetailsPage from "./pages/OrderDetailsPage"
+import CoinsPage from "./pages/CoinsPage"
 
-setupIonicReact();
+setupIonicReact()
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          <Route exact path="/tab1">
-            <Tab1 />
-          </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
-          </Route>
-          <Route path="/tab3">
-            <Tab3 />
-          </Route>
-          <Route exact path="/">
-            <Redirect to="/tab1" />
-          </Route>
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon aria-hidden="true" icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter>
-  </IonApp>
-);
 
-export default App;
+const App: React.FC = () => {
+  useApiErrorHandler(); // Global 403 handler
+  return (
+    <Provider store={store}>
+      <IonApp>
+        <IonReactRouter>
+          <IonRouterOutlet>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/signup">
+              <SignUp />
+            </Route>
+            <Route exact path="/reset-password">
+              <ResetPassword />
+            </Route>
+            <Route path="/dashboard" component={Dashboard} />
+            <Route exact path="/change-password">
+              <ChangePasswordPage />
+            </Route>
+            <Route exact path="/addresses">
+              <AddressesPage />
+            </Route>
+            <Route exact path="/select-location">
+              <SelectLocationPage />
+            </Route>
+            <Route exact path="/add-address">
+              <AddAddressPage />
+            </Route>
+            <Route exact path="/edit-address/:id">
+              <EditAddressPage />
+            </Route>
+            <Route exact path="/select-address">
+              <SelectAddressPage />
+            </Route>
+            <Route exact path="/restaurant-details/:outletId">
+              <RestaurantDetails />
+            </Route>
+            <Route exact path="/order-processing/:orderId">
+              <OrderProcessingPage />
+            </Route>
+            <Route exact path="/orders-history">
+              <OrdersHistoryPage />
+            </Route>
+            <Route exact path="/orders-history/details/:orderId">
+              <OrderDetailsPage />
+            </Route>
+            <Route exact path="/favorites">
+              <FavoritesPage />
+            </Route>
+            <Route exact path="/coins">
+              <CoinsPage />
+            </Route>
+            <Route exact path="/">
+              <Redirect to="/dashboard" />
+            </Route>
+          </IonRouterOutlet>
+        </IonReactRouter>
+      </IonApp>
+    </Provider>
+  );
+}
+
+export default App

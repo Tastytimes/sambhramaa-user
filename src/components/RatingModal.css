@@ -1,0 +1,187 @@
+.rating-modal-content {
+          --padding-start: 16px;
+          --padding-end: 16px;
+        }
+
+        .restaurant-info-section {
+          text-align: center;
+          padding: 20px 0;
+          border-bottom: 1px solid var(--ion-color-light);
+        }
+
+        .restaurant-info-section h2 {
+          margin: 0 0 8px 0;
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+
+        .restaurant-info-section p {
+          margin: 0;
+          color: var(--ion-color-medium);
+        }
+
+        .rating-section {
+          padding: 24px 0;
+          text-align: center;
+        }
+
+        .rating-section h3 {
+          margin: 0 0 16px 0;
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+
+        .star-rating-container {
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+          margin-bottom: 12px;
+        }
+
+        .rating-star {
+          font-size: 2rem;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+
+        .rating-star.large {
+          font-size: 2.5rem;
+        }
+
+        .rating-star.filled {
+          color: #fbbf24;
+        }
+
+        .rating-star.empty {
+          color: #d1d5db;
+        }
+
+        .rating-star:hover {
+          transform: scale(1.1);
+        }
+
+        .sentiment-indicator {
+          font-weight: 600;
+          margin: 8px 0 0 0;
+        }
+
+        .review-section {
+          margin: 20px 0;
+        }
+
+        .categories-section {
+          margin: 24px 0;
+        }
+
+        .categories-section h3 {
+          margin: 0 0 16px 0;
+          font-size: 1.1rem;
+          font-weight: 600;
+        }
+
+        .rating-tag {
+          margin: 4px;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+
+        .rating-tag.selected {
+          background: var(--ion-color-primary);
+          color: white;
+        }
+
+        .items-rating-section {
+          margin: 24px 0;
+        }
+
+        .items-rating-section h3 {
+          margin: 0 0 16px 0;
+          font-size: 1.1rem;
+          font-weight: 600;
+        }
+
+        .item-rating-card {
+          background: var(--ion-color-light);
+          border-radius: 12px;
+          padding: 16px;
+          margin-bottom: 12px;
+        }
+
+        .item-info h4 {
+          margin: 0 0 4px 0;
+          font-size: 1rem;
+          font-weight: 600;
+        }
+
+        .item-info p {
+          margin: 0;
+          color: var(--ion-color-medium);
+          font-size: 0.9rem;
+        }
+
+        .item-rating {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin: 12px 0;
+        }
+
+        .item-sentiment {
+          font-size: 0.9rem;
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+
+        .item-review {
+          margin-top: 8px;
+        }
+
+        .submit-section {
+          padding: 24px 0;
+        }
+
+        /* Category and tag chip styles used in RatingModal.tsx */
+        .category-chips {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+
+        .category-chip {
+          --background: transparent;
+          border: 1px solid var(--ion-color-light);
+          color: var(--ion-color-medium);
+          padding: 6px 10px;
+          border-radius: 16px;
+          cursor: pointer;
+          transition: all 0.15s ease;
+        }
+
+        .category-chip.selected {
+          background: var(--ion-color-primary);
+          color: #fff;
+          border-color: var(--ion-color-primary);
+        }
+
+        .tag-chip {
+          --background: transparent;
+          border: 1px solid var(--ion-color-light);
+          color: var(--ion-color-medium);
+          padding: 6px 10px;
+          border-radius: 16px;
+          cursor: pointer;
+          transition: all 0.15s ease;
+        }
+
+        .tag-chip.selected {
+          background: var(--ion-color-primary);
+          color: #fff;
+          border-color: var(--ion-color-primary);
+        }
+
+        .loading-tags {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-top: 8px;
+        }
